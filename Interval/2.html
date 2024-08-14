@@ -1,0 +1,181 @@
+<!-- Create counter -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+    .main1{
+        width: 85%;
+        height: 20vh;
+        /* border: 1px solid; */
+        margin-top: 4%;
+        display: flex;
+    }
+
+    .b1{
+        width: 25%;
+        height: 20vh;
+        /* border: 1px solid; */
+    }
+
+    .icon{
+        margin-top: 5%;
+        color: white;
+    }
+    #num1{
+        margin-bottom: -4%;
+        color: white;
+    }
+    .b2{
+        width: 25%;
+        height: 20vh;
+        /* border: 1px solid; */
+    }
+    #num2{
+        margin-bottom: -4%;
+        color: white;
+    }
+    .b3{
+        width: 25%;
+        height:20vh;
+        /* border: 1px solid; */
+    }
+    #num3{
+        margin-bottom: -4%;
+        color: white;
+    }
+    .b4{
+        width: 25%;
+        height: 20vh;
+        /* border: 1px solid; */
+    }
+    #num4{
+        margin-bottom: -4%;
+        color: white;
+    }
+    .b5{
+        width: 25%;
+        height: 20vh;
+        /* border: 1px solid; */
+    }
+    #num5{
+        margin-bottom: -4%;
+        color: white;
+    }
+
+    .txt1{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+    <center><div class="main1" style="background-color: #02395A;">
+        <div class="b1">
+            <i class="fa-regular fa-user icon" style="font-size: 25px; color: white;"></i>
+
+            <h1 id="num1"></h1>
+            <p class="txt1" style="color: white;">Student Trained</p>
+        </div>
+        <div class="b2">
+            <i style="color: white; font-size: 30px;" class="fa-regular fa-building icon"></i>
+
+            <h1 id="num2" style="color: white;"></h1>
+            <p style="color: white;" class="txt1">Branches</p>
+
+
+        </div>
+        <div class="b3">
+            <i style="color: white; font-size: 30px;" class="fa-solid fa-certificate icon"></i>
+                    <h1 id="num3" style="color: white;"></h1>
+                    <p style="color: white;" class="txt1">Certification</p>
+
+        </div>
+        <div class="b4">
+            <i class="fa-regular fa-user user icon" style="font-size: 25px; color: white; "></i>
+
+            <h1 id="num4" style="color: white;"></h1>
+            <p style="color: white;" class="txt1">Approved Course</p>
+
+
+        </div>
+        <div class="b5">
+            <i class="fa-regular fa-user user icon" style="font-size: 25px; color: white;"></i>
+
+            <h1 id="num5" style="color: white;"></h1>
+            <p style="color: white;" class="txt1">Companies Tie-Ups</p>
+        </div>
+    </div></center>
+</body>
+</html>
+
+
+<script>
+    let index1 = 37000
+    
+    let stop1 = setInterval(()=>{
+        index1++
+
+        document.querySelector("#num1").innerHTML=index1 + "+"
+
+        if(index1===37500){
+            clearInterval(stop1)
+            
+        }
+    },10)
+
+
+    let index2 = 0    
+    let stop2 = setInterval(()=>{
+        index2++
+
+        document.querySelector("#num2").innerHTML=index2 + "+"
+
+        if(index2===50){
+            clearInterval(stop2)
+            
+        }
+    },100)
+
+
+
+    let index3 = 0    
+    let stop3 = setInterval(()=>{
+        index3++
+
+        document.querySelector("#num3").innerHTML=index3 + "+"
+
+        if(index3===8){
+            clearInterval(stop3)
+            
+        }
+    },600)
+
+    let index4 = 0    
+    let stop4 = setInterval(()=>{
+        index4++
+
+        document.querySelector("#num4").innerHTML=index4 + "+"
+
+        if(index4===50){
+            clearInterval(stop4)
+            
+        }
+    },100)
+
+    let index5 = 0    
+    let stop5 = setInterval(()=>{
+        index5++
+
+        document.querySelector("#num5").innerHTML=index5 + "+"
+
+        if(index5===1500){
+            clearInterval(stop5)
+            
+        }
+    },1)
+</script>

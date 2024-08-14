@@ -1,0 +1,34 @@
+<!-- 7. Write a function for celsius to fahrenheit -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Enter Temperature in Celsius</h1>
+    <input type="text" id="in1">
+
+    <h1 id="ans"></h1>
+
+
+</body>
+</html>
+
+<script>
+    let a = document.getElementById("in1").value
+
+    function temp(a){
+        let temp = (a * 9/5) + 32
+
+        return temp
+    }
+    temp(a)
+
+    document.getElementById("ans").innerHTML = temp(a)
+</script>

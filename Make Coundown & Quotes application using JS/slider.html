@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="slider.css">
+</head>
+<body>
+    
+    
+    <div class="container">
+
+
+        <center><h1 class="txt1">Slider of Mountain</h1></center>
+
+        <div class="image-sliderfade fade">
+            <img src="img/img-1.jpg"
+                 style="width: 100%" />
+            <div class="text">Image Slide-1</div>
+        </div>
+ 
+        <div class="image-sliderfade fade">
+            <img src="img/img-2.jpg"
+                 style="width: 100%" />
+            <div class="text">Image Slide-2</div>
+        </div>
+ 
+        <div class="image-sliderfade fade">
+            <img src="img/img-3.jpg"
+                 style="width: 100%" />
+            <div class="text">Image Slide-3</div>
+        </div>
+
+        <div class="image-sliderfade fade">
+            <img src="img/img-4.jpg"
+                 style="width: 100%" />
+            <div class="text">Image Slide-3</div>
+        </div>
+    </div>
+    <br />
+ 
+
+    <div style="text-align: center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</body>
+</html>
+
+<script>
+    let slideIndex = 0;
+showSlides(); 
+
+function showSlides() {
+	let i;
+
+	
+	let slides = document.getElementsByClassName("image-sliderfade");
+
+	
+	let dots = document.getElementsByClassName("dot");
+
+	for (i = 0; i < slides.length; i++) {
+		
+		slides[i].style.display = "none";
+	}
+
+	
+	slideIndex++;
+
+	
+	if (slideIndex > slides.length) {
+		slideIndex = 1;
+	}
+
+	for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	}
+
+	slides[slideIndex - 1].style.display = "block";
+	dots[slideIndex - 1].className += " active";
+
+	
+	setTimeout(showSlides, 2000);
+}
+</script>

@@ -1,0 +1,29 @@
+<!-- Q3 Return details of students who scored more than 60 and roll number greater than 15. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+        let Students = [
+        {name : "ayush", rollno : 1, marks :55},
+        {name : "rutul", rollno : 20, marks :76},
+        {name : "vrushil", rollno : 16, marks :70},
+        {name : "utsav", rollno : 4, marks :50},
+        {name : "saurabh", rollno : 4, marks :40}
+    ]
+
+    let ans = Students.filter((el)=>{
+        return el.marks>60 && el.rollno > 15
+    })
+
+    console.log(ans)
+</script>

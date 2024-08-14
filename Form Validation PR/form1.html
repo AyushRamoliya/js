@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body style="background-color: #EEE7D7;">
+
+    <div class="main1">
+
+    <form action="" id="signup" >   
+
+        <a href="form2.html" id="sign">signup</a>
+        <h1 class="txt1">Log in </h1> <br>
+
+        <h4 for=""  class="txt2">UserName <span>*</span></h4>
+        <input type="text" id="name" class="b1">
+        
+     
+     
+        <h4 for="" class="txt2">Password <span>*</span></h4>
+        <input type="text" id="pw" class="b1">
+        
+        <input type="submit" class="btn1">
+        <br><br><br><br>
+        <span id="err" style="color: red; margin-left: 30%;" ></span>
+    </form>
+    </div>
+</body>
+</html>
+
+<script>
+    document.getElementById("signup").onsubmit = function (event) {
+        document.getElementById("err").innerHTML = ""
+        event.preventDefault()
+        try {
+            let name = document.getElementById("name").value
+            let password = document.getElementById("pw").value
+
+            if (name === "") {
+                throw new Error("please enter name")
+            }
+            if (password.length < 8) {
+                throw new Error("Minimum 8 characters required")
+            }
+            // if (password !== cpw) {
+            //     throw new Error("Worng input....!")
+            // }
+        }
+        catch (err) {
+            document.getElementById("err").innerHTML = err.message
+        }
+    }
+</script>

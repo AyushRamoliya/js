@@ -1,0 +1,27 @@
+<!-- 5. Design a function that finds length of a string pass as arguement. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Enter Name</h1>
+    <input type="text" name="" id="in1">
+
+    <h1 id="ans"></h1>
+</body>
+</html>
+
+
+<script>
+    let a = document.getElementById("in1").value
+
+    function length (a){
+        document.getElementById("ans").innerHTML = a.length
+    }
+
+    length(a)
+</script>

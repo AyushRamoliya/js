@@ -1,0 +1,36 @@
+<!-- 2. Design a function that computes the area of a rectangle given its length and width as parameters. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ENTER LENGTH</h1>
+    <input type="text" id="in1"><br>
+
+    <h1>ENTER WIDTH</h1>
+    <input type="text" id="in2">
+
+    <h1 id="ans"></h1>
+</body>
+</html>
+
+<script>
+
+    let a=document.getElementById("in1").value
+    let b=document.getElementById("in2").value
+
+    sum = (a,b) => {
+        let ans=+a * +b
+
+        return ans
+    }
+
+  
+
+    document.getElementById("ans").innerHTML = "The area of a rectangle="+ sum(a,b)
+    
+</script>

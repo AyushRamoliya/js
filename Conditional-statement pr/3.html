@@ -1,0 +1,39 @@
+<!-- 3. Write a simple number guessing game. Provide a secret number and a guess. Based on those numbers give players clues if their guess is higher, lower or correct. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Guess A Number</h1>
+    <input type="text" id="in1">
+
+    <h1 id="ans"></h1>
+</body>
+</html>
+
+<script>
+    let sim_num = 8
+
+    let user_number = document.getElementById("in1").value
+
+    if(user_number ===""){
+        document.getElementById("in1").innerHTML="Enter number..."
+    }
+    else{
+        if(user_number == sim_num){
+            document.getElementById("ans").innerHTML="You win the game..."
+        }
+
+        else if(user_number > sim_num){
+            document.getElementById("ans").innerHTML="Decrease number..."
+        }
+        else if(user_number < sim_num){
+            document.getElementById("ans").innerHTML= "Increase number...."
+        }
+    }
+
+</script>

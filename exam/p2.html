@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Search</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="p2.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Foldit:wght@100..900&display=swap" rel="stylesheet">
+
+ 
+</head>
+
+<body>
+    <center>
+        <header>
+            <div class="flex items-center" id="a1">
+                <input id="searchItem" type="text" placeholder="Enter your recipe...">
+                <button id="searchBtn" style="color: black;">Search</button>
+            </div>
+        </header>
+    </center>
+
+    <div id="mainDiv">
+        <p class="text-3xl font-bold mt-3" style="font-family: Cedarville Cursive; font-size: 40px; font-weight: 800;">Enter Food Category...</p>
+    </div>
+
+    <script>
+        document.getElementById("searchBtn").addEventListener("click", function () {
+            const search = document.getElementById("searchItem").value;
+
+            fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
+                .then((res) => res.json())
+                .then((json) => {
+                    console.clear();
+                    console.log(json);
+
+                    let mainDiv1 = document.getElementById("mainDiv");
+                    mainDiv1.innerHTML = "";
+
+                    if (json.meals) {
+                        json.meals.forEach((meal) => {
+                            let recipeDiv = document.createElement("div");
+                            recipeDiv.className = "item_div";
+                            recipeDiv.innerHTML = `
+                                <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
+                                <div class="item_content">
+                                    <h2 id="text">${meal.strMeal}</h2>
+                                    <p><strong>Tags:</strong> ${meal.strTags || 'N/A'}</p>
+                                    <p><strong>Category:</strong> ${meal.strCategory}</p>
+                                    <p><strong>Area:</strong> ${meal.strArea}</p>
+                                    <p><strong>Area:</strong> ${meal.strIngredient1}</p>
+                                    <p><strong>Area:</strong> ${meal.strIngredient2}</p>
+                                    
+
+                                    <input type="text" class="input_box" />
+                                    <button class="btn btn-edit">Edit</button>
+                                    <button class="btn btn-update">Update</button>
+                                </div>
+                            `;
+
+                            const input1 = recipeDiv.querySelector(".input_box");
+                            const editButton = recipeDiv.querySelector(".btn-edit");
+                            const updateButton = recipeDiv.querySelector(".btn-update");
+
+                            editButton.addEventListener("click", function () {
+                                input1.value = meal.strMeal;
+                                input1.style.display = "block";
+                            });
+
+                            updateButton.addEventListener("click", function () {
+                                let new_value = input1.value;
+                                recipeDiv.querySelector("#text").innerText = new_value;
+                            });
+
+                            mainDiv1.append(recipeDiv);
+                        });
+                    } else {
+                        mainDiv1.innerHTML = "<p class='text-white text-xl'>No results found.</p>";
+                    }
+                })
+                .catch(err => {
+                    console.log("Error");
+                });
+        });
+    </script>
+</body>
+
+</html>

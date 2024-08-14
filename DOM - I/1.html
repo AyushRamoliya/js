@@ -1,0 +1,95 @@
+<!-- 1. Complete the functionality in the file selectors.html
+On clicking the button Change H1 the colour of first <h1> should turn to red
+On clicking the button Change H3 the colour of all <h3> should turn to green
+On clicking the button Change H5 the colour of all <h5> should turn to blue
+On clicking Change Green all the elements with the class green should change to green
+On clicking Change Blue all the elements with the class blue should change to blue
+On clicking Change Red all the elements with the class red should change to red -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1" class="red">ayush ramoliya</h1>
+    <br>
+
+    <h3 id="h3" class="green">Course : BCA</h3>
+    <br>
+
+    <h5 id="h5" class="blue">Subcourse : Fullstack</h5>
+    <br>
+
+    
+    <button id="btn1" onclick="chgColor()">Change color</button>
+
+
+
+
+
+
+    <h1 class="green">My name is ayush ramoliya</h1>
+    <h1 class="green">I am studeing in red & white</h1>
+
+    <button onclick="green()">Chage color</button>
+
+
+
+    <h3 class="blue">I am studing in BCA.</h3>
+    <h1 class="blue">I am studing in Fullstack.</h1>
+
+    <button onclick="blue()">Chage color</button>
+
+
+
+
+    <h5 class="red">buterfly buterfly</h5>
+    <h5 class="red">buterfly buterfly</h5>
+
+    <button onclick="red()">Chage color</button>
+</body>
+</html>
+
+
+<script>
+    function chgColor(){
+        document.querySelector("h1").style.color="red"
+        document.querySelector("h3").style.color="green"
+        document.querySelector("h5").style.color="blue"
+    }
+
+    function green(){
+        let green = document.getElementsByClassName("green")
+
+        for(let i=0; i < green.length; i++){
+            green[i].style.color="green"
+        }
+    }
+
+
+
+    function blue(){
+        let blue = document.getElementsByClassName("blue")
+
+        for(let i=0; i < blue.length; i++){
+            blue[i].style.color="blue"
+        }
+    }
+
+    function red(){
+        let red = document.getElementsByClassName("red")
+
+        for(let i=0; i < red.length; i++){
+            red[i].style.color="red"
+        }
+    }
+
+
+
+
+
+</script>

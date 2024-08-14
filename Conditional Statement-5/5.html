@@ -1,0 +1,49 @@
+<!-- Question 5:
+Make Starbucks menu. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Select Your Coffee</h1>
+
+    <select name="" id="option">
+        <option value="Caffe Americano">Caffe Americano</option>
+        <option value="Cold coffee">Cold coffee</option>
+        <option value="Double Chocolate Chip Cookie">Double Chocolate Chip Cookie</option>
+        <option value="Cappuccino">Cappuccino</option>
+    </select>
+
+    <h1 id="ans"></h1>
+</body>
+</html>
+
+<script>
+    let coffee = document.getElementById("option").value
+
+    if(option === ""){
+        document.getElementById("ans").innerHTML = ""
+    }
+    
+    else{
+        switch(coffee){
+            case "Caffe Americano" : console.log("₹ 278.25")
+            break
+
+            case "Cold coffee" : console.log("₹ 372.75")
+            break
+
+            case "Double Chocolate Chip Cookie" : console.log("₹ 414.75")
+            break
+
+            case "Cappuccino" : console.log("₹ 299.25")
+            break
+
+            default:console.log("Enter any other coffee...")
+        }
+    }
+</script>

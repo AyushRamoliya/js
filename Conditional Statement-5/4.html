@@ -1,0 +1,46 @@
+<!-- Question 4:
+Create a JavaScript program that greets users in different languages based on their selected language preference. Implement a switch statement to achieve this. When the language is set to 'English', display 'Hello!'. For 'Spanish', display '¡Hola!'. If the selected language is 'French', print 'Bonjour!'. In any other case, display 'Language not supported.'. Finally, display the greeting in the selected language and provide the language name. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+      *{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+    <center><label>Enter languages....(English, Spanish, French) </label>
+        <input type="text" id="in1"></center> 
+    
+        <h1 id="ans"></h1>
+</body>
+</html>
+
+<script>
+    let languages = document.getElementById("in1").value
+
+    if(languages === ""){
+        document.getElementById("ans").innerHTML =""
+    }
+
+    else{
+        switch(languages){
+            case "English" : console.log("Hello!")
+            break
+
+            case "Spanish" : console.log("Hola!")
+            break
+
+
+            case "French" :console.log("Bonjour!")
+            break
+
+            default :console.log("'Language not supported....")
+        }
+    }
+</script>

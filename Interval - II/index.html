@@ -1,0 +1,56 @@
+<!-- Create a slider of your choice -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    img{
+        display: none;
+        width: 100%;
+    }
+</style>
+<body>
+    
+    <img src="img/img-1.jpg" alt="">
+    <img src="img/img-2.jpg" alt="">
+    <img src="img/img-3.jpg" alt="">
+    <img src="img/img-4.jpg" alt="">
+    <img src="img/img-5.jpg" alt="">
+    <img src="img/img-6.jpg" alt="">
+
+</body>
+</html>
+
+
+<script>
+
+    let pic = document.querySelectorAll("img")
+
+    let index = 0
+
+    function slides(index){
+        for(let i = 0 ; i < pic.length ; i++){
+            pic[i].style.display = "none"
+        }
+        pic[index].style.display = "block"
+    }
+
+    function show(){
+        setInterval(()=>{
+            slides(index)
+            index++
+
+            if(index === pic.length){
+            index = 0
+            }
+        },1000)
+       
+    }
+
+    show()
+</script>

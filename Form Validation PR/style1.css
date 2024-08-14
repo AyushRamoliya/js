@@ -1,0 +1,40 @@
+.main1{
+    width: 30%;
+    height: 70vh;
+    border: 1px solid;
+    background-color: white;
+    margin-left: 35%;
+    margin-top: 10%;
+}
+
+.txt1{
+    font-size: 50px;
+    font-family:'Times New Roman', Times, serif;
+    margin-left: 30%;
+    margin-top: 5%;
+}
+.txt2{
+    margin-left: 30%;
+}
+.b1{
+    margin-left: 30%;
+}
+.btn1{
+    width: 180px;
+    height: 30px;
+    border: 1px solid;
+    margin-left: 30%;
+    background-color: #FEB843;
+    color: white;
+    margin-top: 8%;
+}
+#sign{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    margin-left: 77%;
+    
+}
+span{
+    color: red;
+}

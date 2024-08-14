@@ -1,0 +1,32 @@
+<!-- 4.Convert dollars into Rupees. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>1 dollar amt into rupees = ₹ 83.50</h1>
+
+    <h1>Enter rupees</h1>
+    <input type="text" id="in1">
+<br><br><br>
+    <label for="">Convertable amount in rupees (₹)</label>
+    <h1 id="ans"></h1>
+
+</body>
+</html>
+
+<script>
+    let dollar = 83.50
+
+    let rupee = document.getElementById("in1").value
+
+    let convertable_amt = dollar * rupee
+
+    document.getElementById("ans").innerHTML = convertable_amt
+
+</script>

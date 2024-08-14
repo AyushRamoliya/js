@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Caveat";
+    /* background-color: #00feba; */
+}
+
+#searchBtn {
+    margin-left: 5%;
+    border: none;
+    width: 150px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#searchItem {
+    width: 320px;
+    border: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 20px;
+}
+
+header {
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    width: 40%;
+    height: 90px;
+    margin: 20px 2.5%;
+}
+
+header img {
+    height: 50px;
+}
+
+#a1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header input[type="text"] {
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 15px;
+    width: 300px;
+    transition: all 0.3s;
+}
+
+header input[type="text"]:focus {
+    border-color: #00feba;
+    box-shadow: 0 0 10px rgba(0, 254, 186, 0.5);
+}
+
+header button {
+    background-color: #fff;
+    border: 1px solid #333;
+    border-radius: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+header button:hover {
+    background-color: #00feba;
+    color: #333;
+}
+
+#mainDiv {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.item_div {
+    background-color: #444;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px;
+}
+
+.item_div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.item_div img {
+    width: 100%;
+    border-bottom: 3px solid #00feba;
+}
+
+.item_content {
+    padding: 20px;
+}
+
+.item_content h2 {
+    font-size: 20px;
+    color: #fff;
+}
+
+.item_content p {
+    font-size: 14px;
+    color: #bbb;
+    margin: 10px 0;
+}
+
+.btn {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-edit {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.btn-edit:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.btn-update {
+    background-color: #27ae60;
+    color: #fff;
+}
+
+.btn-update:hover {
+    background-color: #229954;
+    transform: scale(1.05);
+}
+
+.input_box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: none;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+}
